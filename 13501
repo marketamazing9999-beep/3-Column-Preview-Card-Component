@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+:root{
+  --orange:hsl(31, 77%, 52%);
+  --dark-cyan:hsl(184, 100%, 22%);
+  --very -dark-cyan:hsl(179, 100%, 13%);
+  /*paragraphs*/
+  --light-white:hsla(0, 0%, 100%, 0.75);
+ /*(background, headings, buttons)*/
+  --light-gray:hsl(0, 0%, 95%);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+body{
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  overflow-x: hidden;
+  /*font-family
+  font-family:"Big Shoulders", sans-serif;*/
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 2rem;
+}
+#cars-type .row {
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#cars-type .row .col:first-child {
+  background-color: var(--orange);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+#cars-type .row .col:nth-child(2) {
+  background-color:hsl(184, 100%, 22%);
+}
+#cars-type .row .col:last-child {
+  background-color:hsl(179, 100%, 13%);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#cars-type .row .col{
+   padding: 45px;
+}
+#cars-type .row .col h2{
+  font-size: 30px;
+  font-family:"Big Shoulders", sans-serif;
+  margin: 30px 0;
+  color: hsl(0, 0%, 95%);
+}
+#cars-type .row .col p{
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color:hsla(0, 0%, 100%, 0.75);
+}
+#cars-type .row .col .btn{
+  background-color:hsl(0, 0%, 95%);
+  padding: 12px 25px;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px;
+}
+/*btns*/
+
+#cars-type .row .col:first-child .btn{
+  color:hsl(31, 77%, 52%);
+}
+ 
+#cars-type .row .col:nth-child(2) .btn{
+   color:hsl(184, 100%, 22%);
+}
+
+#cars-type .row .col:last-child .btn{
+  color:hsl(179, 100%, 13%);
+}
+#cars-type .row .col .btn:hover{
+  background-color: transparent;
+  color:hsla(0, 0%, 100%, 0.75);
+} 
+/* Responsive */
+@media (max-width:800px){
+  #container, #cars-type{
+    width: 100%;
+    max-width: 100%;
+    box-sizing:border-box;
+    padding: 2rem 1.5rem;
+  }
+  #cars-type .row {
+    grid-template-columns: 1fr;
+  }
+#cars-type .row .col:first-child {
+ border-bottom-left-radius:0px;
+ border-top-right-radius:10px;
+border-top-left-radius:10px
+ 
+}
+#cars-type .row .col:last-child {
+ border-top-right-radius:0px;
+ border-bottom-left-radius:10px;
+border-bottom-right-radius:10px;
+}
+}
